@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="bstu.by.lab4.MainActivity">
+
+
+    <ImageView
+        android:id="@+id/image_one"
+        android:layout_width="150dp"
+        android:layout_height="140dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="30dp"
+        app:srcCompat="@mipmap/aaa" />
+
+    <ImageView
+        android:id="@+id/image_two"
+        android:layout_width="150dp"
+        android:layout_height="140dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/image_one"
+        android:layout_marginEnd="26dp"
+        app:srcCompat="@mipmap/bbb" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/image_one"
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="60dp"
+        android:max="1500"
+        android:progress="1000" />
+
+    <Button
+        android:id="@+id/start_anim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/seekBar"
+        android:layout_below="@+id/seekBar"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="37dp"
+        android:text="start" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@+id/image_two" />
+
+    <Button
+        android:id="@+id/start_async"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/start_anim"
+        android:layout_alignBottom="@+id/start_anim"
+        android:layout_centerHorizontal="true"
+        android:text="Async" />
+
+    <SeekBar
+        android:id="@+id/seekBarDelay"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/seekBar"
+        android:layout_toEndOf="@+id/textView"
+        android:max="2500"
+        android:progress="1000"/>
+
+    <Button
+        android:id="@+id/start_synk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/start_async"
+        android:layout_alignBottom="@+id/start_async"
+        android:layout_alignEnd="@+id/seekBarDelay"
+        android:layout_marginEnd="18dp"
+        android:text="sync" />
+
+    <TextView
+        android:id="@+id/textviewDuration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/seekBarDelay"
+        android:layout_alignStart="@+id/image_one"
+        android:layout_marginBottom="11dp"
+        android:text="Duration" />
+
+    <TextView
+        android:id="@+id/textviewDelay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textviewDuration"
+        android:layout_alignBottom="@+id/textviewDuration"
+        android:layout_toEndOf="@+id/start_async"
+        android:text="Delay" />
+
+
+</RelativeLayout>
